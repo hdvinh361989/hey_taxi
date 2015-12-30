@@ -1,0 +1,21 @@
+<ion-view view-title="Map">
+  <ion-nav-buttons side="primary">
+    <button class="button button-icon icon ion-navigate"
+            ng-click="mapCtrl.gotoCurPosition()">
+    </button>
+  </ion-nav-buttons>
+
+  <ion-content scroll="false">
+    <ui-gmap-google-map center='mapCtrl.gMapConfig.coords'
+                        zoom="mapCtrl.gMapConfig.zoom"
+                        pan="true"
+                        control="mapCtrl.gMapConfig"
+    >
+
+      <ui-gmap-marker idKey="mapCtrl.markers.user.id"
+                      coords="mapCtrl.markers.user.coords"
+      ></ui-gmap-marker>
+
+    </ui-gmap-google-map>
+  </ion-content>
+</ion-view>
